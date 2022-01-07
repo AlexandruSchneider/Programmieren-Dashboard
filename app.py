@@ -104,9 +104,14 @@ def buildLayout(data) -> dash:
     ])
 
 
+def initApp2():
+    
+
+
 def main():
     df = loadData()
     app = initApp()
+    '''
     app.layout = buildLayout(df)
 
     @app.callback(
@@ -115,6 +120,8 @@ def main():
     )
     def update_output_div(input_value):
         return getRows(df, input_value),
+    '''
+    app.layout = html.Div(children=[html.H2("Dashboard Olympia Alex & André")])
 
     app.run_server(debug=True, host="0.0.0.0", port=9999)
 
